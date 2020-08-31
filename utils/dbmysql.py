@@ -2,22 +2,16 @@ from sqlalchemy.orm import sessionmaker
 from sqlalchemy import create_engine
 import pymysql
 
-DB_URI = "mysql+mysqlconnector://jscadmin01:Jsc190203@rm-2zeo7x35d2iqlqk71lo.mysql.rds.aliyuncs.com:3306/bh_gl?charset=utf8"
-# DB_URI = "mysql+pymysql://root:password@127.0.0.1:3306/ceshi?charset=utf8mb4"
+DB_URI = "mysql+pymysql://root:password@127.0.0.1:3306/ceshi?charset=utf8mb4"
 engine = create_engine(DB_URI, echo=False, pool_size=10, pool_recycle=60)
 
-host = "rm-2zeo7x35d2iqlqk71lo.mysql.rds.aliyuncs.com"#ip地址
-port = 3306#端口号
-user = "jscadmin01"#数据库的用户名
-passwd="Jsc190203"#数据库的密码
-db='bh_gl'#你要连接的数据库名称
 
-#
-# host = "127.0.0.1"#ip地址
-# port = 3306#端口号
-# user = "root"#数据库的用户名
-# passwd="password"#数据库的密码
-# db='ceshi'#你要连接的数据库名称
+
+host = "127.0.0.1"#ip地址
+port = 3306#端口号
+user = "root"#数据库的用户名
+passwd="password"#数据库的密码
+db='ceshi'#你要连接的数据库名称
 
 
 def getConnection():
